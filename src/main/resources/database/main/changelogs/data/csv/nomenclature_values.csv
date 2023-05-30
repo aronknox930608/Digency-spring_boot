@@ -1,0 +1,38 @@
+ID;ID_PARENT;CODE;NAME_AR;NAME_FR
+1;1;PENDING;;encoure
+2;1;REJECTED;;rejeter
+3;1;DELETED;;supprimer
+4;1;OPEN;;ouverte
+5;1;ACCEPTED;;accepter
+6;1;VALID_SUBSCRIPTION;;souscription valider
+7;2;IDENTITY_NATIONAL;;
+8;2;IDENTITY_RESIDENCY_CARD;;
+9;2;IDENTITY_SEJOUR_CARD;;
+10;2;IDENTITY_PASSPORT;;
+11;2;IDENTITY_VISA;;
+12;2;RIB;;
+13;2;PROCURATION;;
+14;2;RECORD_ANTHROPOMETRIC_JUDICIAL;;fiche anthropométrique ou Fiche judiciaire
+15;2;EMPLOYMENT_CONTRACT;;contrats de travail
+16;2;WORK_CERTIFICATES;; Attestations de travail
+17;2;CIN_CARD;بطاقة التعريف الوطنية; Carte d'identité nationale
+18;2;PASSPORT;جواز السفر; Passport
+19;2;DRIVER_LICENSE_CARD;رخصة السياقة; Permis de conduit
+20;2;RESIDENT_CARD;بطاقة الإقامة; Carte de séjour
+21;2;TECHNICAL_FORM;بطاقة تقنية مفصلة حول اللوحات الفنية المرشحة للدعم تتضمن المعلومات التالية: (العنوان أو التسمية، التقنيات، المواد، القياسات، تاريخ الإنتاج، النوع، حالة العمل الفني); Fiche technique sur les œuvres d’arts proposées comprenant: Le titre, les techniques, les matériaux, les dimensions, la date de réalisation, le type, l’état de l’œuvre)
+22;2;ESTIMATED_PRICE;القيمة المالية المقترحة; Le prix proposé
+23;2;RESUME;السيرة الذاتية للفنان; Le Curriculum Vitae de l’artiste
+24;2;ARTISTIC_FOLDER;ملف فني شامل للفنان المترشح للدعم; Dossier artistique de l’artiste
+25;2;ARTISTIC_CARD;بطاقة الفنان او دبلوم الفنون الجميلة; Carte d’artiste ou diplôme des beaux-arts
+26;2;WORK_PROFESSIONAL_PHOTO;صور احترافية عالية الجودة للوحات المرشحة للاقتناء; Des photos professionnelles HD des œuvres proposées
+27;2;CIN_CARD_COPY_ARTIST;نسخة من البطاقة الوطنية للفنان;  Copie de la carte d’identité nationale du porteur de projet
+28;2;BANK_IDENTIFIER;نموذج شيك أو شهادة التعريف البنكي للفنان; Spécimen de chèque ou une attestation d’identité bancaire du porteur du projet
+29;2;HONOR_STATEMENT;تصريح بالشرف يتضمن الالتزام بالقانون المنظم للدعم وفق النموذج المرفق بملف طلب الترشيح مصادق عليه;  Déclaration sur l’honneur signée et légalisée, portant sur le respect du règlement qui régit le programme de soutien, dont le modèle est joint au dossier de candidature
+30;2;CIN_CARD_COPY_PROJECT_OWNER; نسخة من البطاقة الوطنية لحامل المشروع ; Copie de la carte d’identité nationale
+31;2;RECAP_REQUEST_EXHIBITION;;
+32;2;PASSPORT1;جواز السفر الجهة الأولى;Passport face 2
+33;2;PASSPORT2;جواز السفر الجهة الثانية;Passport face 1
+34;2;LEGAL_STATUS_COPY;نسخة من الوضع القانوني;Copie du statut  juridique
+35;2;LEGAL_DEPOSIT_RECEIPT;نسخة من إيصال الإيداع القانوني;Copie du reçu du dépôt légal
+36;2;LAST_GENERAL_MEETING_COPY;نسخة من محضر اجتماع الجمعية العمومية الأخير;Copie du PV de la dernière assemblée générale
+37;2;TAX_IDENTIFIER_CERTIFICATE;شهادة التعريف الضريبي;Attestation d'identification fiscale

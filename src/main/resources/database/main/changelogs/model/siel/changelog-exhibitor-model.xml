@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_EXHIBITOR" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="EXHIBITOR">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_EXHIBITOR"/>
+            </column>
+            <column name="REF_EXHIBITOR" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="EDITOR_NAME" type="VARCHAR(50)"/>
+            <column name="CIN" type="VARCHAR(255)"/>
+            <column name="COUNTRY" type="VARCHAR(50)"/>
+            <column name="EMAIL" type="VARCHAR(50)"/>
+            <column name="CITY" type="VARCHAR(50)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR(50)"/>
+            <column name="FAX" type="VARCHAR(50)"/>
+            <column name="ADDRESS" type="VARCHAR(50)"/>
+            <column name="HALL_CLASS" type="VARCHAR(50)"/>
+            <column name="SPECIALIZATION" type="VARCHAR(50)"/>
+            <column name="NUMBER_ARABIC_VERSION" type="VARCHAR(50)"/>
+            <column name="NUMBER_FOREIGN_VERSION" type="VARCHAR(50)"/>
+            <column name="COMPANY_REPRESENTATIVE" type="VARCHAR(50)"/>
+            <column name="PRESENTED_MATERIEL" type="VARCHAR[]"/>
+            <column name="ACTIVITY_BRANCHE" type="VARCHAR[]"/>
+            <column name="WING_AREA_SQUARE" type="VARCHAR(50)"/>
+            <column name="PUBLISHING_HOUSE_NAME" type="VARCHAR(50)"/>
+            <column name="RESPONSIBLE_MANAGER_NAME" type="VARCHAR(50)"/>
+            <column name="PERSONAL_PHONE_NUMBER" type="VARCHAR(50)"/>
+            <column name="STATUS" type="VARCHAR(50)"/>
+            <column name="PASSPORT_EXPIRATION" type="DATE"/>
+            <column name="BIRTH_DAY" type="DATE"/>
+            <column name="PASSPORT_NUMBER" type="VARCHAR(50)"/>
+            <column name="PASSPORT_TYPE" type="VARCHAR(50)"/>
+            <column name="PERSON_NAME" type="VARCHAR(50)"/>
+            <column name="BIRTH_COUNTRY" type="VARCHAR(50)"/>
+            <column name="BIRTH_NATIONALITY" type="VARCHAR(50)"/>
+            <column name="HAS_MULTIPLE_REPRESENTED" type="BOOLEAN"/>
+            <column name="HAS_MULTIPLE_FORIEGEN" type="BOOLEAN"/>
+
+
+
+           <!-- <column name="PRESENTED_MATERIEL" type="ARRAY"/>
+            <column name="ACTIVITY_BRANCHE" type="ARRAY"/>-->
+
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

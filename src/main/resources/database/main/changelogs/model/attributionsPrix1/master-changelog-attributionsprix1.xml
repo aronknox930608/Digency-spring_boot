@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+
+    <include relativeToChangelogFile="true" file="changelog-award-model.xml"/>
+    <include relativeToChangelogFile="true" file="changelog-awardCategories-model.xml"/>
+    <include relativeToChangelogFile="true" file="changelog-awardType-model.xml"/>
+    <include relativeToChangelogFile="true" file="changelog-categoriesPlanning-model.xml"/>
+    <include relativeToChangelogFile="true" file="changelog-pricePlanning-model.xml"/>
+    <include relativeToChangelogFile="true" file="changelog-demandPrice-model.xml"/>
+
+
+</databaseChangeLog>

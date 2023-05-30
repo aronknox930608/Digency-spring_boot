@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+
+    <changeSet author="acm_user" id="UPLOAD_ROLE" logicalFilePath="acm"
+               runOnChange="true">
+        <loadUpdateData tableName="ROLE" primaryKey="ID"
+                        file="database/main/changelogs/data/csv/roles.csv" separator=";">
+            <column header="ID" name="ID" type="NUMERIC"/>
+            <column header="REF_ROLE" name="REF_ROLE" type="STRING"/>
+            <column header="CODE_ROLE" name="CODE_ROLE" type="STRING"/>
+            <column header="LABEL_ROLE" name="LABEL_ROLE" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+</databaseChangeLog>

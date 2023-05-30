@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <include relativeToChangelogFile="true" file="changelog-notification-template-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-app_setting-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-notification-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-document-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-demand-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-auth-issue-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-nomenclature-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-general-member-model.xml"/>
+
+
+</databaseChangeLog>

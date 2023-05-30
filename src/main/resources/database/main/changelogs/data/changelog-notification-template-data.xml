@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+
+    <changeSet author="acm_user" id="UPLOAD_TEMPLATE_NOTIFICATION" logicalFilePath="acm"
+               runOnChange="true">
+        <loadUpdateData tableName="TEMPLATE_NOTIFICATION" primaryKey="ID"
+                        file="database/main/changelogs/data/csv/notificationTemplate.csv" separator=";">
+            <column header="ID" name="ID" type="NUMERIC"/>
+            <column header="REF_TEMPLATE_NOTIFICATION" name="REF_TEMPLATE_NOTIFICATION" type="STRING"/>
+            <column header="NATURE" name="NATURE" type="STRING"/>
+            <column header="TYPE" name="TYPE" type="STRING"/>
+            <column header="TEMPLATE_BODY" name="TEMPLATE_BODY" type="STRING"/>
+            <column header="TEMPLATE_OBJECT" name="TEMPLATE_OBJECT" type="STRING"/>
+            <column header="DATE_CREATION" name="DATE_CREATION" type="DATE"/>
+            <column header="DATE_MODIFICATION" name="DATE_MODIFICATION" type="DATE"/>
+            <column header="MODIFICATION_PAR" name="MODIFICATION_PAR" type="STRING"/>
+            <column header="CREATION_PAR" name="CREATION_PAR" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+</databaseChangeLog>

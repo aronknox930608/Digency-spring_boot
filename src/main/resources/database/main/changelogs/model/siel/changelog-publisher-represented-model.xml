@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_PUBLISHER_REPRESENTED" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="PUBLISHER_REPRESENTED">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_PUBLISHER_REPRESENTED"/>
+            </column>
+            <column name="REF_PUBLISHER_REPRESENTED" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="BUSINESS_NAME" type="VARCHAR(50)"/>
+            <column name="OWNER_NAME" type="VARCHAR(50)"/>
+            <column name="CREATION_DATE" type="date"/>
+            <column name="BUSINESS_REGISTER_NUMBER" type="VARCHAR(50)"/>
+            <column name="COMMON_COMPANY_IDENTIFIER" type="VARCHAR(50)"/>
+            <column name="CNSS_NUMBER" type="VARCHAR(50)"/>
+            <column name="SPACE" type="VARCHAR(10)"/>
+            <column name="ADDRESS" type="VARCHAR(220)"/>
+            <column name="CITY" type="VARCHAR(20)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR(20)"/>
+            <column name="FAX_NUMBER" type="VARCHAR(20)"/>
+            <column name="EMAIL" type="VARCHAR(80)"/>
+            <column name="WEBSITE" type="VARCHAR(30)"/>
+            <column name="NUMBER_BOOKS_PUBLISHED_PER_YEAR" type="INTEGER"/>
+            <column name="NUMBER_BOOKS_PUBLISHED_LAST_YEAR" type="INTEGER"/>
+            <column name="TYPE_BOOKS_PUBLISHED" type="VARCHAR[]"/>
+            <column name="PUBLICATION_LANGUAGE" type="VARCHAR[]"/>
+            <column name="NUMBER_PUBLICATIONS_PER_YEAR_ARABIC" type="INTEGER"/>
+            <column name="NUMBER_PUBLICATIONS_PER_YEAR_AMAZIGH" type="INTEGER"/>
+            <column name="NUMBER_PUBLICATIONS_PER_YEAR_FRENCH" type="INTEGER"/>
+            <column name="NUMBER_PUBLICATIONS_PER_YEAR_ENGLISH" type="INTEGER"/>
+            <column name="PERMANENT_EMPLOYEES_NUMBER" type="INTEGER"/>
+            <column name="TEMPORARY_EMPLOYEES_NUMBER" type="INTEGER"/>
+            <column name="DIFFUSERS" type="VARCHAR[]"/>
+            <column name="CUSTOMER_BASE" type="VARCHAR[]"/>
+            <column name="REF_EXHIBITOR" type="VARCHAR(20)">
+                <constraints nullable="false" unique="false"/>
+            </column>
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="REF_EXHIBITOR" baseTableName="PUBLISHER_REPRESENTED"
+                                 constraintName="REF_PUBLISHER_EXHIBITOR_FK" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_EXHIBITOR" referencedTableName="EXHIBITOR"/>
+    </changeSet>
+
+</databaseChangeLog>

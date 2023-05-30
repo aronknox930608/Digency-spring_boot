@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+
+    <changeSet author="acm_user" id="UPLOAD_APP_SETTING" logicalFilePath="acm"
+               runOnChange="true">
+        <loadUpdateData tableName="APP_SETTING" primaryKey="ID"
+                        file="database/main/changelogs/data/csv/appSetting.csv" separator=";">
+            <column header="ID" name="ID" type="NUMERIC"/>
+            <column header="REF_SETTING" name="REF_SETTING" type="STRING"/>
+            <column header="KEY_SETTING" name="KEY_SETTING" type="STRING"/>
+            <column header="VALUE_SETTING" name="VALUE_SETTING" type="STRING"/>
+            <column header="STARTED_DATE" name="STARTED_DATE" type="DATE"/>
+            <column header="END_DATE" name="END_DATE" type="DATE"/>
+            <column header="IS_DATE" name="IS_DATE" type="BOOLEAN"/>
+            <column header="DESCRIPTION_SETTING" name="DESCRIPTION_SETTING" type="STRING"/>
+        </loadUpdateData>
+    </changeSet>
+</databaseChangeLog>

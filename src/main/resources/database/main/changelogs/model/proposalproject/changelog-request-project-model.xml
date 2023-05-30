@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_REQUEST_PROJECT_PROJECT" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="REQUEST_PROPOSAL_PROJECT">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_REQUEST_PROJECT_PROJECT"/>
+            </column>
+            <column name="REF_REQUEST" type="VARCHAR(30)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="REF_ACCOUNT" type="VARCHAR(30)"/>
+            <column name="REF_PROPOSAL_PROJECT" type="VARCHAR(30)"/>
+            <column name="REF_COMPANY_ACCOUNT" type="VARCHAR(30)"/>
+            <column name="REF_COOPERATIVE_ACCOUNT" type="VARCHAR(30)"/>
+            <column name="REF_BOOK_PERSON_ACCOUNT" type="VARCHAR(30)"/>
+            <column name="REF_ARTIST_ACCOUNT" type="VARCHAR(30)"/>
+
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="REF_ACCOUNT" baseTableName="REQUEST_PROPOSAL_PROJECT"
+                                 constraintName="REF_REQUEST_PROPOSAL_PROJECT_A" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_ACCOUNT" referencedTableName="ACCOUNT"/>
+
+
+        <addForeignKeyConstraint baseColumnNames="REF_PROPOSAL_PROJECT" baseTableName="REQUEST_PROPOSAL_PROJECT"
+                                 constraintName="REF_REQUEST_PROPOSAL_PROJECT_P" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_PROJECT" referencedTableName="PROPOSAL_PROJECT"/>
+
+        <addForeignKeyConstraint baseColumnNames="REF_COMPANY_ACCOUNT" baseTableName="REQUEST_PROPOSAL_PROJECT"
+                                 constraintName="REF_REQUEST_PROPOSAL_PROJECT_C" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_COMPANY_ACCOUNT" referencedTableName="COMPANY_ACCOUNT"/>
+
+        <addForeignKeyConstraint baseColumnNames="REF_COOPERATIVE_ACCOUNT" baseTableName="REQUEST_PROPOSAL_PROJECT"
+                                 constraintName="REF_SREQUEST_PROPOSAL_PROJECT_CO" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_COOPERATIVE_ACCOUNT" referencedTableName="COOPERATIVE_ACCOUNT"/>
+
+        <addForeignKeyConstraint baseColumnNames="REF_BOOK_PERSON_ACCOUNT" baseTableName="REQUEST_PROPOSAL_PROJECT"
+                                 constraintName="REF_REQUEST_PROPOSAL_PROJECT_B" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_BOOK_PERSON_ACCOUNT" referencedTableName="BOOK_PERSON_ACCOUNT"/>
+
+        <addForeignKeyConstraint baseColumnNames="REF_ARTIST_ACCOUNT" baseTableName="REQUEST_PROPOSAL_PROJECT"
+                                 constraintName="REF_REQUEST_PROPOSAL_PROJECT_AA" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_ARTIST_ACCOUNT" referencedTableName="ARTIST_ACCOUNT"/>
+
+    </changeSet>
+</databaseChangeLog>

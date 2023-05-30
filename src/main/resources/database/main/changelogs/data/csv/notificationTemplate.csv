@@ -1,0 +1,18 @@
+ID;REF_TEMPLATE_NOTIFICATION;TYPE;NATURE;TEMPLATE_BODY;TEMPLATE_OBJECT
+1;TMNF_AMC_000000001;MAIL;GENERATION_OTP;BodyHTml code OTP #otp ;Code de sécurité
+2;TMNF_AMC_000000002;SMS;GENERATION_OTP;BodyHTml code OTP #otp;Code de sécurité
+3;TMNF_AMC_000000003;APP;VALID_EXHIBITOR;Votre demande de exposition sous le nom #nameExhibitor à été #status.;Validation de l'exposant
+4;TMNF_AMC_000000004;APP;VALID_STAND;Votre demande de réservation de stand à été #status;Validation de la réservation du Stand
+5;TMNF_AMC_000000005;APP;VALID_PUPLICATION;Votre demande de exposition de le publication #namePublication à été #status.;Validation du Publication
+6;TMNF_AMC_000000006;MAIL;VALID_BOOKING;template-booking-school.txt;Validation du réservation d'école
+7;TMNF_AMC_000000007;MAIL;VALID_EXHIBITOR;template-exhibitors.txt;Validation de l'éxposant
+8;TMNF_AMC_000000008;MAIL;VALID_STAND;template-stand.txt;Validation de la réservation du Stand
+9;TMNF_AMC_000000009;MAIL;VALID_PUPLICATION;template-publication.txt;Validation du Publication
+10;TMNF_AMC_000000010;MAIL;VALID_INSCRIPTION;template-inscription.txt;Validation d Inscription
+11;TMNF_AMC_000000011;MAIL;CONFIRM_EMAIL;template-confirm.txt;Confirmation du compte
+12;TMNF_AMC_000000012;MAIL;CONFIRM_EMAIL_DONE;template-confirmed.txt;Votre compte est confirmé
+13;TMNF_AMC_000000013;MAIL;RESET_PASSWORD;template-reset.txt;Reinitialiser votre mot de passe
+14;TMNF_AMC_000000014;MAIL;PASSWORD_CHANGED;template-password-changed.txt;Mot de passe changé
+15;TMNF_AMC_000000015;MAIL;FORCE_RESET_PASSWORD;template-reset-password.txt;Réinitialiser votre mot de passe
+16;TMNF_AMC_000000016;MAIL;CONFIRM_PROPOSAL_PROJECT;template-confirm-proposal-project.txt;Confirmation du demande d'appelle a projet
+

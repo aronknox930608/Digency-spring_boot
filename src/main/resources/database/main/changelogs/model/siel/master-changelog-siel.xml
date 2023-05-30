@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <include relativeToChangelogFile="true" file="changelog-edition-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-exhibitor-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-publication-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-booking-school-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-publisher-represented-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-booking-stand-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-activity-proposal-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-edition-publication-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-foreign-represented-model.xml"/>
+
+
+
+</databaseChangeLog>

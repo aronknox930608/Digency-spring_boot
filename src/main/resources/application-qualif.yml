@@ -1,0 +1,87 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_URL:localhost}:${DB_PORT:5432}/${DB_SHEMA:culture}?stringtype=unspecified
+    username: ${DB_USER:postgres}
+    password: ${DB_PWD:password}
+    driverCLassName: org.postgresql.Driver
+    hikari:
+      auto-commit: false
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    #database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      org.hibernate.envers.do_not_audit_optimistic_locking_field: false
+      org.hibernate.envers.audit_table_suffix: _HISTORICAL
+      org.hibernate.envers.revision_field_name: REVISION_ID
+      org.hibernate.envers.revision_type_field_name: REVISION_TYPE
+      hibernate.format_sql: true
+  liquibase:
+    change-log: classpath:/database/main/database-master-changelog.xml # Change log configuration path.
+    database-change-log-lock-table: DATABASECHANGELOGGLOCK # Name of table to use for tracking concurrent Liquibase usage.
+    database-change-log-table: DATABASECHANGELOG
+    drop-first: false
+    enabled: true
+    password: ${DB_PWD:password}
+    user: ${DB_USER:postgres}
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PROT:587}
+    username: ${MAIL_USERNAME:siel27.rabat@gmail.com}
+    password: ${MAIL_PWD:uhhyyzmdityiccjm}
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          connectiontimeout: 100000
+          timeout: 100000
+          writetimeout: 100000
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+
+server:
+  port: 8443
+  uri: http://localhost:8080/v1/
+  ssl:
+    enabled: true
+    key-store: certificate/bootsecurity.p12
+    key-store-password: 123456
+    key-alias: bootsecurity
+  key-store-type: PKCS12
+logging:
+  level:
+    org.apache.http: DEBUG
+    httpclient.wire: DEBUG
+    root: INFO
+    ma.digency.gov.amc: TRACE
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+culture:
+  application:
+    reference: AMC
+mail:
+  actif: false
+  login : admin@digency.ma
+  password : 123456
+authentication:
+  host-url : https://openid.digiup.ma
+  base-path : /api/v1
+  login-path : /login
+  user-path : /register2
+  role-path : /assign-role
+hostfront:
+  hostname: http://localhost:4200

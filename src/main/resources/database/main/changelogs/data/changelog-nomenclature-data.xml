@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+
+    <changeSet author="acm_user" id="UPLOAD_NOMENCLATURE" logicalFilePath="acm"
+               runOnChange="true">
+        <loadUpdateData tableName="NOMENCLATURE" primaryKey="ID"
+                        file="database/main/changelogs/data/csv/nomenclature.csv" separator=";">
+            <column header="ID" name="ID" type="NUMERIC"/>
+            <column header="FAMILY" name="FAMILY" type="NUMERIC"/>
+            <column header="NAME_AR" name="NAME_AR" type="STRING"/>
+            <column header="NAME_FR" name="NAME_FR" type="STRING"/>
+        </loadUpdateData>
+
+    </changeSet>
+
+    <changeSet author="acm_user" id="UPLOAD_NOMENCLATURE_VALUES" logicalFilePath="acm"
+               runOnChange="true">
+        <loadUpdateData tableName="NOMENCLATURE_VALUES" primaryKey="ID"
+                        file="database/main/changelogs/data/csv/nomenclature_values.csv" separator=";">
+            <column header="ID" name="ID" type="NUMERIC"/>
+            <column header="ID_PARENT" name="ID_PARENT" type="NUMERIC"/>
+            <column header="CODE" name="CODE" type="STRING"/>
+            <column header="NAME_AR" name="NAME_AR" type="STRING"/>
+            <column header="NAME_FR" name="NAME_FR" type="STRING"/>
+        </loadUpdateData>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,76 @@
+spring:
+  datasource:
+    #url: jdbc:h2:~/h2/culture2;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      org.hibernate.envers.do_not_audit_optimistic_locking_field: false
+      org.hibernate.envers.audit_table_suffix: _HISTORICAL
+      org.hibernate.envers.revision_field_name: REVISION_ID
+      org.hibernate.envers.revision_type_field_name: REVISION_TYPE
+      hibernate.format_sql: true
+  liquibase:
+    change-log: classpath:/database/main/database-master-changelog.xml # Change log configuration path.
+    database-change-log-lock-table: DATABASECHANGELOGGLOCK # Name of table to use for tracking concurrent Liquibase usage.
+    database-change-log-table: DATABASECHANGELOG
+    drop-first: false
+    enabled: true
+    password:
+    user: sa
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: application2021amc@gmail.com
+    password: aMc_2021
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          starttls:
+            enable: true
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+server:
+  port: 8080
+  uri: http://localhost:8080/v1/
+
+logging:
+  level:
+    org.apache.http: DEBUG
+    httpclient.wire: DEBUG
+    root: INFO
+    ma.digency.gov.amc: TRACE
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+
+culture:
+  application:
+    reference: AMC
+mail:
+  actif: false
+  login : admin@digency.ma
+  password : 123456
+authentication:
+  host-url : https://openid.digiup.ma
+  base-path : /api/v1
+  login-path : /login
+  user-path : /register2
+  role-path : /assign-role
+hostfront:
+  hostname: http://localhost:4200

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_PUBLICATION" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="PUBLICATION">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_PUBLICATION"/>
+            </column>
+            <column name="REF_PUBLICATION" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="author" type="VARCHAR(50)"/>
+            <column name="title" type="VARCHAR(50)"/>
+            <column name="PUBLISHING_DATE" type="NUMERIC"/>
+            <column name="PUBLISHER" type="VARCHAR(50)"/>
+            <column name="AMOUT" type="NUMERIC"/>
+            <column name="COPIES_NBR" type="NUMERIC"/>
+            <column name="SPECIALITY" type="VARCHAR(50)"/>
+            <column name="ISBN" type="VARCHAR(50)"/>
+            <column name="LEGAL_DEPOSIT" type="VARCHAR(50)"/>
+            <column name="STATUS" type="VARCHAR(50)"/>
+            <column name="COLIS" type="NUMERIC"/>
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+            <column name="REF_EXHIBITOR" type="VARCHAR(20)">
+                <constraints nullable="false" unique="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="REF_EXHIBITOR" baseTableName="PUBLICATION"
+                                 constraintName="REF_EXHIBITOR_FK" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_EXHIBITOR" referencedTableName="EXHIBITOR"/>
+
+    </changeSet>
+
+</databaseChangeLog>

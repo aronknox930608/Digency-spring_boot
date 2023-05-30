@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <include relativeToChangelogFile="true" file="changelog-general-information-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-company-account-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-artistic-profession-category-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-artistic-profession-domain-model.xml"/>
+    
+    <include relativeToChangelogFile="true" file="changelog-artistic-profession-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-artist-account-model.xml"/>
+    <include relativeToChangelogFile="true" file="changelog-company-account-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-cooperative-account-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-cooperative-account-book-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-domain-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-sub-domain-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-proposal-project-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-proposal-project-document-model.xml"/>
+
+    <include relativeToChangelogFile="true" file="changelog-book-person-model.xml"/>
+
+
+    <include relativeToChangelogFile="true" file="changelog-request-project-model.xml"/>
+</databaseChangeLog>

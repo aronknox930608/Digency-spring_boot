@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_NOMENCLATURE" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="NOMENCLATURE">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_NOMENCLATURE"/>
+            </column>
+            <column name="FAMILY" type="VARCHAR(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="NAME_AR" type="VARCHAR(255)"/>
+            <column name="NAME_FR" type="VARCHAR(255)"/>
+
+        </createTable>
+
+        <createTable tableName="NOMENCLATURE_VALUES">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_NOMENCLATURE_VALUES"/>
+            </column>
+            <column name="ID_PARENT" type="BIGINT">
+                <constraints nullable="false" unique="false"/>
+            </column>
+            <column name="CODE" type="VARCHAR(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="NAME_AR" type="VARCHAR(255)"/>
+            <column name="NAME_FR" type="VARCHAR(255)"/>
+
+        </createTable>
+
+
+    </changeSet>
+
+    <changeSet author="amc_user" id="FK_NOMENCLATURE_VALUES">
+        <addForeignKeyConstraint baseColumnNames="ID_PARENT" baseTableName="NOMENCLATURE_VALUES"
+                                 constraintName="FK_NOMENCLATURE_VALUES" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="ID" referencedTableName="NOMENCLATURE"/>
+    </changeSet>
+
+</databaseChangeLog>

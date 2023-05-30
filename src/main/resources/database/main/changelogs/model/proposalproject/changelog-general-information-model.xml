@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_GENERAL_INFORMATION" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="GENERAL_INFORMATION">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_GENERAL_INFORMATION"/>
+            </column>
+            <column name="REF_GENERAL_INFORMATION" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="PROJECT_NAME" type="VARCHAR(250)"/>
+            <column name="PROJECT_TITLE" type="VARCHAR(250)"/>
+            <column name="PROJECT_TYPE" type="VARCHAR(50)"/>
+            <column name="NUM_DANCES_OR_SONGS" type="BIGINT"/>
+            <column name="DURATION_TIME" type="FLOAT"/>
+            <column name="PROJECT_COST" type="DOUBLE"/>
+            <column name="PROJECT_DESCRIPTION" type="TEXT"/>
+            <column name="ALBUM_TITLE" type="VARCHAR(250)"/>
+
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+           <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+           <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+           <column name="CREATION_PAR" type="VARCHAR(255)"/>
+   </createTable>
+      </changeSet>
+
+       </databaseChangeLog>

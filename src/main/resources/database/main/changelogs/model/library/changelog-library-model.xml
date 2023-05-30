@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="ybarouhou" id="CREATE_TABLE_LIBRARY" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="LIBRARY">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_LIBRARY"/>
+            </column>
+            <column name="REF_LIBRARY" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="LIBRARY_NAME" type="VARCHAR(50)"/>
+            <column name="LIBRARY_OWNER_NAME" type="VARCHAR(50)"/>
+            <column name="LIBRARY_CREATION_DATE" type="date"/>
+            <column name="BUSINESS_REGISTER_NUMBER" type="VARCHAR(50)"/>
+            <column name="STANDARD_DEFINITION_OF_BUSINESS" type="VARCHAR(50)"/>
+            <column name="CNSS_NUMBER" type="VARCHAR(50)"/>
+            <column name="LIBRARY_SPACE" type="VARCHAR(10)"/>
+            <column name="ADDRESS" type="VARCHAR(220)"/>
+            <column name="CITY" type="VARCHAR(20)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR(20)"/>
+            <column name="EMAIL" type="VARCHAR(80)"/>
+            <column name="ADRESSES_NUMBER" type="VARCHAR(20)"/>
+            <column name="BOOKS_LANGUAGE_SOLD" type="VARCHAR[]"/>
+            <column name="PERMANENT_EMPLOYEES_NUMBER" type="INTEGER"/>
+            <column name="TEMPORARY_WORKERS_NUMBER" type="INTEGER"/>
+            <column name="SUPPLY_SOURCE" type="VARCHAR[]"/>
+            <column name="CUSTOMER_BASE" type="VARCHAR[]"/>
+            <column name="LIBRARY_OTHER_PRODUCT" type="VARCHAR[]"/>
+            <column name="SUGGESTED_TYPES_BOOK" type="VARCHAR[]"/>
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+
+
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <include relativeToChangelogFile="true" file="siel/master-changelog-siel.xml"/>
+
+    <include relativeToChangelogFile="true" file="shared/master-changelog-shared.xml"/>
+
+    <include relativeToChangelogFile="true" file="commission/master-changelog-commission.xml"/>
+
+    <include relativeToChangelogFile="true" file="proposalproject/master-changelog-proposalproject.xml"/>
+   <!-- <include relativeToChangelogFile="true" file="library/master-changelog-library.xml"/>
+    <include relativeToChangelogFile="true" file="author/master-changelog-author.xml"/> -->
+    <include relativeToChangelogFile="true" file="attributionsprix/master-changelog-attributionsprix.xml"/>
+
+    <include relativeToChangelogFile="true" file="attributionsprix1/master-changelog-attributionsprix1.xml"/>
+    <include relativeToChangelogFile="true" file="artistCard/master-changelog-card.xml"/>
+</databaseChangeLog>

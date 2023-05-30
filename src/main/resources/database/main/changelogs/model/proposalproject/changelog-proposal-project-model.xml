@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_PROPOSAL_PROJECT" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="PROPOSAL_PROJECT">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_PROPOSAL_PROJECT"/>
+            </column>
+            <column name="REF_PROJECT" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="START_DATE" type="DATE"/>
+            <column name="END_DATE" type="DATE"/>
+            <column name="REF_SUB_DOMAIN" type="VARCHAR(20)"/>
+            <column name="STATUS" type="VARCHAR(50)"/>
+            <column name="AMOUNT" type="NUMERIC"/>
+
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="REF_SUB_DOMAIN" baseTableName="PROPOSAL_PROJECT"
+                                 constraintName="REF_SUB_DOMAIN_PROPOSAL_PROJECT" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_SUB_DOMAIN" referencedTableName="PROJECT_SUB_DOMAIN"/>
+    </changeSet>
+
+
+
+</databaseChangeLog>

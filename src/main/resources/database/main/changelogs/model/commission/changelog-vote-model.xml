@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_VOTE" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="VOTE">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_VOTE"/>
+            </column>
+            <column name="REF_VOTE" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="REF_PLANNING" type="VARCHAR(20)"/>
+            <column name="REF_PUBLICATION" type="VARCHAR(20)"/>
+            <column name="ACCEPTED" type="INT"/>
+            <column name="REJECTED" type="INT"/>
+            <column name="REJECTED_REASON" type="VARCHAR(255)"/>
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+
+            
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="REF_PLANNING" baseTableName="VOTE"
+                                 constraintName="REF_PLANNING_VOTE_FK" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_PLANNING" referencedTableName="PLANNING"/>
+
+        <addForeignKeyConstraint baseColumnNames="REF_PUBLICATION" baseTableName="VOTE"
+                                 constraintName="REF_PUBLICATION_VOTE_FK" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_PUBLICATION" referencedTableName="PUBLICATION"/>
+
+    </changeSet>
+
+</databaseChangeLog>

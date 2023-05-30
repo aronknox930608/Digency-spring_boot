@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_EDITION_PUBLICATION" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="EDITION_PUBLICATION">
+            <column name="REF_EDITION" type="VARCHAR(20)">
+                <constraints primaryKey="true" primaryKeyName="PK_EDITION_PUBLICATION" nullable="false" unique="false"/>
+            </column>
+            <column name="REF_PUBLICATION" type="VARCHAR(20)">
+                <constraints primaryKey="true" primaryKeyName="PK_EDITION_PUBLICATION" nullable="false" unique="false"/>
+            </column>
+
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="REF_EDITION" baseTableName="EDITION_PUBLICATION"
+                                 constraintName="REF_EDITION_EDITION_FK" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_EDITION" referencedTableName="EDITION"/>
+
+
+        <addForeignKeyConstraint baseColumnNames="REF_PUBLICATION" baseTableName="EDITION_PUBLICATION"
+                                 constraintName="REF_EDITION_PUBLICATION_FK" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_PUBLICATION" referencedTableName="PUBLICATION"/>
+
+    </changeSet>
+
+</databaseChangeLog>

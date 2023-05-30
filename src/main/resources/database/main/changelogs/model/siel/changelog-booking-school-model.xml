@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_BOOKING_SCHOOL" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="BOOKING_SCHOOL">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_BOOKING_SCHOOL"/>
+            </column>
+            <column name="REF_BOOKING_SCHOOL" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="REF_EDITION" type="VARCHAR(20)"/>
+            <column name="EMAIL" type="VARCHAR(50)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR(50)"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="CITY" type="VARCHAR(50)"/>
+            <column name="DATE_VISIT" type="DATE"/>
+            <column name="TIME_VISIT" type="TIME"/>
+            <column name="VISITORS_NUMBER" type="NUMERIC"/>
+            <column name="STATUS" type="VARCHAR(50)"/>
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="REF_EDITION" baseTableName="BOOKING_SCHOOL"
+                                 constraintName="REF_EDITION_SCHOOL_FK" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_EDITION" referencedTableName="EDITION"/>
+
+    </changeSet>
+
+</databaseChangeLog>

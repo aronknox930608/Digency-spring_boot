@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="soamra" id="FK_REF_ROLE_ROLE">
+        <addForeignKeyConstraint baseColumnNames="REF_ROLE" baseTableName="ROLE_ACCOUNT"
+                                 constraintName="FK_REF_ROLE_ROLE" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_ROLE" referencedTableName="ROLE"/>
+    </changeSet>
+
+    <changeSet author="soamra" id="FK_REF_ROLE_ACCOUNT">
+        <addForeignKeyConstraint baseColumnNames="REF_ACCOUNT" baseTableName="ROLE_ACCOUNT"
+                                 constraintName="FK_REF_ROLE_ACCOUNT" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="REF_ACCOUNT" referencedTableName="ACCOUNT"/>
+    </changeSet>
+
+</databaseChangeLog>

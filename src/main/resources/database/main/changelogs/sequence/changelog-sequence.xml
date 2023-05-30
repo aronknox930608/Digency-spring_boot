@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet author="acm_user" id="ID_SEQ_HIBERNATE_SEQUENCE">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="HIBERNATE_SEQUENCE" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_ACCOUNT">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_ACCOUNT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_PUBLICATION">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_PUBLICATION" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_EXHIBITOR">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_EXHIBITOR" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="ybarouhou" id="ID_SEQ_REF_LIBRARY">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_LIBRARY" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="ybarouhou" id="ID_SEQ_REF_PRINTER">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_PRINTER" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="ybarouhou" id="ID_SEQ_REF_DISTRIBUTOR">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_DISTRIBUTOR" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="ybarouhou" id="ID_SEQ_REF_SUGGESTED_TYPES_BOOK">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_SUGGESTED_TYPES_BOOK" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="ybarouhou" id="ID_SEQ_REF_PUBLISHING_HOUSE">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_LIBRARY_OTHER_PRODUCT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="ybarouhou" id="ID_SEQ_REF_AUTHOR">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_AUTHOR" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="ybarouhou" id="ID_SEQ_REF_BOOK">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_BOOK" startValue="1"/>
+    </changeSet>
+
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_BOOKING_SCHOOL">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_BOOKING_SCHOOL" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_COMMISSION">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_COMMISSION" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_PLANNING_COMMISSION">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_PLANNING_COMMISSION" startValue="1"/>
+    </changeSet>
+
+    <changeSet id="acm_user" author="ID_SEQ_REF_COMMISSION_ACCOUNT">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_COMMISSION_ACCOUNT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_REF_VOTE_COMMISSION">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_VOTE_COMMISSION" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_REF_ACTIVITY_PROPOSAL">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_ACTIVITY_PROPOSAL" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_REF_BOOKING_STAND">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_BOOKING_STAND" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_REF_PUBLISHER_REPRESENTED">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_PUBLISHER_REPRESENTED" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_REF_DOCUMENT">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_DOCUMENT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_REF_EDITION">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_EDITION" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_REF_ARTIST_ACCOUNT">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_ARTIST_ACCOUNT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_COMPANY_ACCOUNT">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_COMPANY_ACCOUNT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_COOPERATIVE_ACCOUNT">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_COOPERATIVE_ACCOUNT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="acm_user" id="ID_SEQ_REF_COOPERATIVE_ACCOUNT_BOOK">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_COOPERATIVE_ACCOUNT_BOOK" startValue="1"/>
+    </changeSet>
+    <changeSet id="acm_user" author="ID_SEQ_REF_NOTIFICATION">
+        <createSequence sequenceName="SEQ_REF_NOTIFICATION" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+
+    <changeSet author="felkasmi" id="ID_SEQ_REF_PRIXH">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REFPRIXH" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REF_FONTTYPE">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_FONTTYPE" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REF_HANDWRITTEN">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REF_MANISCRUPTINFORMATION">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REFMANISCRUPTINFORMATION" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REF_MANUSCRIPTSTYPE">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_MANUSCRIPTSTYPE" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REF_DEMAND">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REFDEMAND" startValue="1"/>
+    </changeSet>
+    <changeSet author="ksahli" id="ID_SEQ_REF_DEMAND_CARD">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_DEMAND_CARD" startValue="1"/>
+    </changeSet>
+    <changeSet id="KSAHLI" author="ID_SEQ_REF_DEMAND_PLANNING">
+        <createSequence sequenceName="SEQ_REF_DEMAND_PLANNING" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFAWARDHONORARY">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REFAWARDHONORARY" startValue="1"/>
+    </changeSet>
+
+
+    <changeSet author="felkasmi" id="ID_SEQ_REF_CANDIDAT">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_CANDIDAT" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFAWARD">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REFAWARD" startValue="1"/>
+    </changeSet>
+
+    <changeSet id="acm_user" author="REF_FOREIGN_REPRESENTED">
+        <createSequence sequenceName="REF_FOREIGN_REPRESENTED" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+    <changeSet id="acm_user" author="ID_SEQ_REF_GENERAL_INFORMATION">
+        <createSequence sequenceName="SEQ_REF_GENERAL_INFORMATION" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+    <changeSet id="acm_user" author="ID_SEQ_REF_GENERAL_MEMBER">
+        <createSequence sequenceName="SEQ_REF_GENERAL_MEMBER" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+    <changeSet author="acm_user" id="ID_REF_ARTISTIC_PROFESSION">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_ARTISTIC_PROFESSION" startValue="1"/>
+    </changeSet>
+    <changeSet author="acm_user" id="ID_REF_ARTISTIC_PROFESSION_DOMAIN">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_ARTISTIC_PROFESSION_DOMAIN" startValue="1"/>
+    </changeSet>
+    <changeSet author="acm_user" id="ID_REF_ARTISTIC_PROFESSION_CATEGORY">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_ARTISTIC_PROFESSION_CATEGORY" startValue="1"/>
+    </changeSet>
+
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFAWARDBOOK">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_AWARD_BOOK" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFBOOKPRICE">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_BOOK_PRICE" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFDOMAIN">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_DOMAIN" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFAWARDOBTAINED">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_AWARD_OBTAINED" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFAWARDTHEATER">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_AWARD_THEATER" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFTHEATERPIECE">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_THEATER_PIECE" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFROLETHEATER">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_ROLE_THEATER" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFPARTICIPANTSTHEATER">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_PARTICIPANTS_THEATER" startValue="1"/>
+    </changeSet>
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFPRICE">
+        <createSequence incrementBy="1" maxValue="999999999"
+                        sequenceName="SEQ_REF_PRICE" startValue="1"/>
+    </changeSet>
+
+    <changeSet id="ID_SEQ_REF_PROJECT_DOMAIN" author="acm">
+        <createSequence sequenceName="SEQ_REF_PROJECT_DOMAIN" incrementBy="1" maxValue="999999999" startValue="1"/>
+    </changeSet>
+
+    <changeSet id="ID_SEQ_REF_PROJECT_SUB_DOMAIN" author="acm">
+        <createSequence sequenceName="SEQ_REF_PROJECT_SUB_DOMAIN" incrementBy="1" maxValue="999999999" startValue="1"/>
+    </changeSet>
+
+    <changeSet id="ID_SEQ_REF_PROJECT" author="acm">
+        <createSequence sequenceName="SEQ_REF_PROJECT" incrementBy="1" maxValue="999999999" startValue="1"/>
+    </changeSet>
+
+    <changeSet id="ID_SEQ_REF_BOOK_PERSON" author="acm">
+        <createSequence sequenceName="SEQ_REF_BOOK_PERSON" incrementBy="1" maxValue="999999999" startValue="1"/>
+    </changeSet>
+
+
+    <changeSet id="KSAHLI" author="ID_SEQ_REF_CARD">
+        <createSequence sequenceName="SEQ_REF_CARD" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+    <changeSet id="KSAHLI" author="ID_SEQ_REF_DEMAND">
+        <createSequence sequenceName="SEQ_REF_DEMAND" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+    <changeSet id="felkasmi" author="ID_SEQ_REF_AWARD">
+        <createSequence sequenceName="SEQ_REF_AWARD" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+    <changeSet id="felkasmi" author="ID_SEQ_REF_AWARD_TYPE">
+        <createSequence sequenceName="SEQ_REF_AWARD_TYPE" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+    <changeSet id="felkasmi" author="ID_SEQ_REF_AWARD_CATEGORIES">
+        <createSequence sequenceName="SEQ_REF_AWARD_CATEGORIES" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+    <changeSet id="felkasmi" author="ID_SEQ_REF_CATEGORIES_PLANNING">
+        <createSequence sequenceName="SEQ_REF_CATEGORIES_PLANNING" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+    <changeSet id="felkasmi" author="ID_SEQ_REF_PRICE_PLANNING">
+        <createSequence sequenceName="SEQ_REF_PRICE_PLANNING" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+    <changeSet id="felkasmi" author="ID_SEQ_REF_DEMAND_PRICE">
+        <createSequence sequenceName="SEQ_REF_DEMAND_PRICE" incrementBy="1" maxValue="999999999"
+                        startValue="1"/>
+    </changeSet>
+
+
+    <changeSet author="felkasmi" id="ID_SEQ_REFROLE">
+        <createSequence incrementBy="5" maxValue="999999999"
+                        sequenceName="SEQ_REF_ROLE" startValue="1"/>
+    </changeSet>
+
+
+</databaseChangeLog>

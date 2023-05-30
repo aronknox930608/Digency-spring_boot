@@ -1,0 +1,18 @@
+package ma.digency.gov.amc.utils.enumeration;
+
+public enum NotificationNature {
+
+    GENERATION_OTP,
+    VALIDATION_CARD,
+    VALID_BOOKING,
+    VALID_STAND,
+    VALID_EXHIBITOR,
+    VALID_INSCRIPTION,
+    VALID_PUPLICATION,
+    CONFIRM_EMAIL,
+    CONFIRM_EMAIL_DONE,
+    RESET_PASSWORD,
+    PASSWORD_CHANGED,
+    CONFIRM_PROPOSAL_PROJECT
+
+}

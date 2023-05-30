@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="ybarouhou" id="CREATE_TABLE_LIBRARY_BOOK" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="LIBRARY_BOOK">
+            <column name="REF_LIBRARY" type="VARCHAR(20)">
+                <constraints primaryKey="true" primaryKeyName="PK_LIBRARY_BOOK" nullable="false" unique="false"/>
+            </column>
+            <column name="REF_BOOK" type="VARCHAR(20)">
+                <constraints primaryKey="true" primaryKeyName="PK_LIBRARY_BOOK" nullable="false" unique="false"/>
+            </column>
+
+        </createTable>
+
+
+    </changeSet>
+
+</databaseChangeLog>

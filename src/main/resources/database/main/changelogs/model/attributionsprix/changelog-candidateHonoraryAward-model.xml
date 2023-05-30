@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_CANDIDATE_HONORARY_AWARD" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="CANDIDATE_HONORARY_AWARD">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_CANDIDATE_HONORARY_AWARD"/>
+            </column>
+            <column name="REF_CANDIDATE" type="VARCHAR(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="CIN" type="VARCHAR(50)"/>
+            <column name="FIRST_NAME" type="VARCHAR(50)"/>
+            <column name="LAST_NAME" type="VARCHAR(50)"/>
+            <column name="FIRST_NAME_AR" type="VARCHAR(50)"/>
+            <column name="LAST_NAME_AR" type="VARCHAR(50)"/>
+            <column name="GENDER" type="VARCHAR(15)"/>
+            <column name="EMAIL" type="VARCHAR(50)"/>
+            <column name="PHONE_NUMBER" type="VARCHAR(50)"/>
+            <column name="MARITAL_STATUS" type="VARCHAR(30)"/>
+            <column name="DEPENDENT_CHILDREN" type="INTEGER"/>
+            <column name="CITY" type="VARCHAR(255)"/>
+            <column name="COUNTRY" type="VARCHAR(255)"/>
+            <column name="ADDRESS" type="VARCHAR(255)"/>
+            <column name="REGION" type="VARCHAR(255)"/>
+            <column name="PROVINCE" type="VARCHAR(255)"/>
+            <column name="POSTAL_CODE" type="VARCHAR(255)"/>
+            <column name="BIRTH_CITY" type="VARCHAR(255)"/>
+            <column name="BIRTH_COUNTRY" type="VARCHAR(255)"/>
+            <column name="BIRTH_DATE" type="DATE"/>
+            <column name="NATIONALITY" type="VARCHAR(255)"/>
+            <column name="RIB_NUMBER" type="VARCHAR(50)"/>
+            <column name="DOMAIN_NAME" type="VARCHAR(255)"/>
+            <column name="PICTURE" type="BLOB"/>
+            <column name="CV" type="BLOB"/>
+
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

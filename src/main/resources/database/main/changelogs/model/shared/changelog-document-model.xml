@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_DOCUMENT" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="DOCUMENT">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_DOCUMENT"/>
+            </column>
+            <column name="REF_DOCUMENT" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="TYPE" type="VARCHAR(255)"/>
+            <column name="NAME" type="VARCHAR(255)"/>
+            <column name="NATURE" type="VARCHAR(255)"/>
+            <column name="SIZE" type="NUMERIC"/>
+            <column name="REF_OBJECT" type="VARCHAR(50)"/>
+            <column name="REF_PARENT" type="VARCHAR(50)"/>
+            <column name="DATA" type="BLOB"/>
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+
+
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

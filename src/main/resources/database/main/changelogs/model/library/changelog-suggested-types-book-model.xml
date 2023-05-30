@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="ybarouhou" id="CREATE_TABLE_SUGGESTED_TYPES_BOOK" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="SUGGESTED_TYPES_BOOK">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_SUGGESTED_TYPES_BOOK"/>
+            </column>
+            <column name="REF_SUGGESTED_TYPES_BOOK" type="VARCHAR(20)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="TYPE_BOOK" type="VARCHAR(50)"/>
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

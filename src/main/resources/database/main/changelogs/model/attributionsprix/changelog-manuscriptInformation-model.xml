@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="felkasmi" id="CREATE_TABLE_MANUSCRIPT_INFORMATION" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="MANUSCRIPT_INFORMATION">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_MANUSCRIPT_INFORMATION"/>
+            </column>
+            <column name="REF_MANUSCRIPT_INFORMATION" type="VARCHAR(500)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="DOCUMENTS_SUBJECT" type="VARCHAR(500)"/>
+
+            <column name="ISSUING_AUTHORITY" type="VARCHAR(500)"/>
+
+            <column name="REF_DEMAND" type="VARCHAR(50)"/>
+
+            <column name="AUTHORITIES_CONCERNED" type="VARCHAR(500)"/>
+
+            <column name="BIBLIOGRAPHY" type="VARCHAR(500)"/>
+
+            <column name="REF_MANUSCRIPT_TYPE" type="VARCHAR(20)"/>
+
+            <column name="WRITING_DATE" type="DATE"/>
+
+            <column name="REF_ARTIST_ACCOUNT" type="varchar(50)"/>
+
+            <column name="AUTHOR_NAME" type="VARCHAR(500)"/>
+
+            <column name="INTRODUCTION" type="VARCHAR(500)"/>
+
+            <column name="CONCLUSION" type="VARCHAR(500)"/>
+
+            <column name="PAPERS_NUMBER" type="INTEGER"/>
+
+            <column name="SIZE" type="FLOAT"/>
+
+            <column name="RULE" type="VARCHAR(500)"/>
+
+            <column name="AUTHORSHIP_DATE" type="DATE"/>
+
+            <column name="TRANSCRIBER_NAME" type="VARCHAR(500)"/>
+
+            <column name="COPY_DATE" type="DATE"/>
+
+            <column name="EXPLANATION" type="VARCHAR(500)"/>
+
+            <column name="MANUSCRIPT_TITLE" type="VARCHAR(500)"/>
+
+            <column name="CREATION_DATE" type="DATE"/>
+
+            <column name="PRINTER_NAME" type="VARCHAR(200)"/>
+
+            <column name="PRINT_DATE" type="VARCHAR(500)"/>
+
+            <column name="INK" type="VARCHAR(100)"/>
+
+            <column name="CATEGORY" type="VARCHAR(200)"/>
+
+            <column name="HOLDER_TYPE" type="VARCHAR(200)"/>
+
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="acm_user" id="CREATE_TABLE_GENERAL_MEMBER" logicalFilePath="acm"
+               runOnChange="true">
+        <createTable tableName="GENERAL_MEMBER">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="PK_GENERAL_MEMBER"/>
+            </column>
+            <column name="REF_GENERAL_MEMBER" type="VARCHAR(20)"/>
+            <column name="REF_PARENT" type="VARCHAR(20)"/>
+            <column name="FIRST_NAME" type="VARCHAR(250)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+            <column name="LAST_NAME" type="VARCHAR(250)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+            <column name="CIN" type="VARCHAR(250)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+            <column name="GENDER" type="VARCHAR(50)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+            <column name="EMAIL" type="VARCHAR(250)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+            <column name="PHONE_NUMBER" type="VARCHAR(250)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+            <column name="ROLE" type="VARCHAR(250)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+
+            <column name="DATE_CREATION" type="TIMESTAMP"/>
+            <column name="DATE_MODIFICATION" type="TIMESTAMP"/>
+            <column name="MODIFICATION_PAR" type="VARCHAR(255)"/>
+            <column name="CREATION_PAR" type="VARCHAR(255)"/>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>
